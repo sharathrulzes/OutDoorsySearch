@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  OutDoorsySearch
 //
-//  Created by abhinav  sarampelly on 2/26/21.
+//  Created by Sharat on 2/26/21.
 //
 
 import UIKit

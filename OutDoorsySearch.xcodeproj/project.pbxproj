@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		63361FD125EA05CC00714F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63361FD025EA05CC00714F2A /* Assets.xcassets */; };
 		63361FD425EA05CC00714F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63361FD225EA05CC00714F2A /* LaunchScreen.storyboard */; };
 		63361FDE25EA074C00714F2A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63361FDD25EA074C00714F2A /* ListViewController.swift */; };
+		63361FE925EA168600714F2A /* ListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63361FE825EA168600714F2A /* ListTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		63361FD325EA05CC00714F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63361FD525EA05CC00714F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63361FDD25EA074C00714F2A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		63361FE825EA168600714F2A /* ListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableCell.swift; sourceTree = "<group>"; };
 		A2ACB566BF74E32B0EB31CF9 /* Pods_OutDoorsySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutDoorsySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B88AB2117858455382E24F /* Pods-OutDoorsySearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutDoorsySearch.debug.xcconfig"; path = "Target Support Files/Pods-OutDoorsySearch/Pods-OutDoorsySearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,8 @@
 		63361FC325EA05CB00714F2A /* OutDoorsySearch */ = {
 			isa = PBXGroup;
 			children = (
+				63361FE725EA166200714F2A /* Model */,
+				63361FE625EA165B00714F2A /* View */,
 				63361FC425EA05CB00714F2A /* AppDelegate.swift */,
 				63361FC625EA05CB00714F2A /* SceneDelegate.swift */,
 				63361FDD25EA074C00714F2A /* ListViewController.swift */,
@@ -75,6 +79,21 @@
 				63361FCD25EA05CB00714F2A /* OutDoorsySearch.xcdatamodeld */,
 			);
 			path = OutDoorsySearch;
+			sourceTree = "<group>";
+		};
+		63361FE625EA165B00714F2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63361FE825EA168600714F2A /* ListTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63361FE725EA166200714F2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A9E40E2D6BD06FB62F8C8582 /* Frameworks */ = {
@@ -91,7 +110,6 @@
 				D3B88AB2117858455382E24F /* Pods-OutDoorsySearch.debug.xcconfig */,
 				622253FE2861E392079A7D10 /* Pods-OutDoorsySearch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63361FC525EA05CB00714F2A /* AppDelegate.swift in Sources */,
+				63361FE925EA168600714F2A /* ListTableCell.swift in Sources */,
 				63361FCF25EA05CB00714F2A /* OutDoorsySearch.xcdatamodeld in Sources */,
 				63361FDE25EA074C00714F2A /* ListViewController.swift in Sources */,
 				63361FC725EA05CB00714F2A /* SceneDelegate.swift in Sources */,
