@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F6277DF761847775A095C0 /* Pods_OutDoorsySearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2ACB566BF74E32B0EB31CF9 /* Pods_OutDoorsySearch.framework */; };
 		63361FC525EA05CB00714F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63361FC425EA05CB00714F2A /* AppDelegate.swift */; };
 		63361FC725EA05CB00714F2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63361FC625EA05CB00714F2A /* SceneDelegate.swift */; };
 		63361FCC25EA05CB00714F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63361FCA25EA05CB00714F2A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		622253FE2861E392079A7D10 /* Pods-OutDoorsySearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutDoorsySearch.release.xcconfig"; path = "Target Support Files/Pods-OutDoorsySearch/Pods-OutDoorsySearch.release.xcconfig"; sourceTree = "<group>"; };
 		63361FC125EA05CB00714F2A /* OutDoorsySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutDoorsySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63361FC425EA05CB00714F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63361FC625EA05CB00714F2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		63361FD325EA05CC00714F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63361FD525EA05CC00714F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63361FDD25EA074C00714F2A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		A2ACB566BF74E32B0EB31CF9 /* Pods_OutDoorsySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutDoorsySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B88AB2117858455382E24F /* Pods-OutDoorsySearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutDoorsySearch.debug.xcconfig"; path = "Target Support Files/Pods-OutDoorsySearch/Pods-OutDoorsySearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F6277DF761847775A095C0 /* Pods_OutDoorsySearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				63361FC325EA05CB00714F2A /* OutDoorsySearch */,
 				63361FC225EA05CB00714F2A /* Products */,
+				AA41C89B6B2D7E24945691F7 /* Pods */,
+				A9E40E2D6BD06FB62F8C8582 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = OutDoorsySearch;
 			sourceTree = "<group>";
 		};
+		A9E40E2D6BD06FB62F8C8582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2ACB566BF74E32B0EB31CF9 /* Pods_OutDoorsySearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA41C89B6B2D7E24945691F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3B88AB2117858455382E24F /* Pods-OutDoorsySearch.debug.xcconfig */,
+				622253FE2861E392079A7D10 /* Pods-OutDoorsySearch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63361FD825EA05CC00714F2A /* Build configuration list for PBXNativeTarget "OutDoorsySearch" */;
 			buildPhases = (
+				05BF82197E21FEFA0EB592F6 /* [CP] Check Pods Manifest.lock */,
 				63361FBD25EA05CB00714F2A /* Sources */,
 				63361FBE25EA05CB00714F2A /* Frameworks */,
 				63361FBF25EA05CB00714F2A /* Resources */,
+				D1EF12C3320DA0FB1B7BFB9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05BF82197E21FEFA0EB592F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OutDoorsySearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1EF12C3320DA0FB1B7BFB9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OutDoorsySearch/Pods-OutDoorsySearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OutDoorsySearch/Pods-OutDoorsySearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutDoorsySearch/Pods-OutDoorsySearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63361FBD25EA05CB00714F2A /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		63361FD925EA05CC00714F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B88AB2117858455382E24F /* Pods-OutDoorsySearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +375,7 @@
 		};
 		63361FDA25EA05CC00714F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622253FE2861E392079A7D10 /* Pods-OutDoorsySearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
