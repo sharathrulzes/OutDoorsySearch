@@ -8,9 +8,11 @@
 import UIKit
 
 class ListViewController: UIViewController {
-    let defaultRowHeight: CGFloat = 111.0
+    let defaultRowHeight: CGFloat = 81.0
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var listView: UITableView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
+    @IBOutlet weak var noResultsLabel: UILabel!
     var outDoorsy: [Outdoorsy]?
     var outDoorsyRespone: OutdoorsyResponse?
     override func viewDidLoad() {
@@ -18,6 +20,7 @@ class ListViewController: UIViewController {
         listView.tableFooterView = UIView(frame: .zero)
         listView.estimatedRowHeight = defaultRowHeight
         listView.rowHeight = UITableView.automaticDimension
+        self.activityView.startAnimating()
         DispatchQueue.main.async {
             self.getOutDoorsDetails([:])
         }
@@ -25,6 +28,7 @@ class ListViewController: UIViewController {
     }
     func getOutDoorsDetails(_ params: [String: Any]) {
         APIHandler.getOutDoorsyDetails(params) { (reponse, error) in
+            self.activityView.stopAnimating()
             guard let responseobj = reponse else{
                 return
             }
@@ -33,6 +37,7 @@ class ListViewController: UIViewController {
             }
             self.outDoorsyRespone = responseobj
             self.outDoorsy = obj
+            self.noResultsLabel.isHidden = self.outDoorsy?.count ?? 0 > 0
             self.listView.reloadData()
         }
     }
@@ -50,6 +55,17 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.tag = indexPath.row
         cell.updateListCell(outDoorsyRespone)
         return cell
+    }
+}
+
+extension ListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let params = ["keywords": searchText]
+        self.getOutDoorsDetails(params as [String : Any])
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 

@@ -25,14 +25,17 @@ class APIHandler {
             urlString.append("?")
             urlString.append("filter[keywords]=\(params["keywords"] ?? "")")
         }
-        var request = URLRequest(url: URL(string: urlString)!,timeoutInterval: Double.infinity)
+        guard let url = URL(string: urlString) else {
+            return completionHandler(nil, nil)
+        }
+        var request = URLRequest(url: url,timeoutInterval: 60)
         request.httpMethod = "GET"
         AF.request(request).response { data in
-            if let error = data.error  {
-                completionHandler(nil, error)
-                return
+            guard let responseData = data.data else {
+                APIHandler.showAlert(data.error?.localizedDescription ?? "Something went wrong")
+                return completionHandler(nil, data.error)
             }
-            let response = try? JSONDecoder().decode(OutdoorsyResponse.self, from: data.data!)
+            let response = try? JSONDecoder().decode(OutdoorsyResponse.self, from: responseData)
             completionHandler(response, nil)
         }
     }

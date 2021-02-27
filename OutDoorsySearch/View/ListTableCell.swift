@@ -21,10 +21,8 @@ class ListTableCell: UITableViewCell {
         if let doorsy = outDoorsyRespone?.data?[self.tag], let obj = doorsy.relationships {
             guard let imageUrl = outDoorsyRespone?.getImageUrlOftheRental(obj.primaryImage?.data?.id) else { return  }
             ImageDownloader.shared.downloadImage(with: imageUrl, completionHandler: { (image, cached) in
-
                 self.displayImage.image = image
-
-            }, placeholderImage: nil)
+            }, placeholderImage: UIImage(named: "launch"))
         }
     }
 }
