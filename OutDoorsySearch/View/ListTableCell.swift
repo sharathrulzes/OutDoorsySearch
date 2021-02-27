@@ -14,6 +14,17 @@ class ListTableCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func updateListCell() {
+    func updateListCell(_ outDoorsyRespone: OutdoorsyResponse?) {
+        if let doorsy = outDoorsyRespone?.data?[self.tag], let obj = doorsy.attributes {
+            titleLabel.text = obj.name
+        }
+        if let doorsy = outDoorsyRespone?.data?[self.tag], let obj = doorsy.relationships {
+            guard let imageUrl = outDoorsyRespone?.getImageUrlOftheRental(obj.primaryImage?.data?.id) else { return  }
+            ImageDownloader.shared.downloadImage(with: imageUrl, completionHandler: { (image, cached) in
+
+                self.displayImage.image = image
+
+            }, placeholderImage: nil)
+        }
     }
 }
